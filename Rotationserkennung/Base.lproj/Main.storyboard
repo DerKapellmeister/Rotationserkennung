@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rvo-um-e9p">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="smartCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-qp-DUS" customClass="TouchImageView" customModule="smartCam" customModuleProvider="target">
+                                <rect key="frame" x="8" y="52" width="359" height="529"/>
+                                <color key="tintColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8t1-vK-B3q">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCq-ZX-nYZ" customClass="ButtonView" customModule="smartCam" customModuleProvider="target">
+                                <rect key="frame" x="8" y="589" width="359" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="VST-kd-2aN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <state key="normal" title="Select from Gallery">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6VX-NX-58r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnK-qp-DUS" secondAttribute="trailing" constant="8" id="3XW-ZX-kZf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iCq-ZX-nYZ" secondAttribute="trailing" constant="8" id="5HG-vL-Rdo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iCq-ZX-nYZ" secondAttribute="bottom" constant="8" id="HdR-zH-5pH"/>
+                            <constraint firstItem="dnK-qp-DUS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="PQm-jk-CnC"/>
+                            <constraint firstItem="iCq-ZX-nYZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W7s-sY-UTw"/>
+                            <constraint firstItem="8t1-vK-B3q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fY3-fk-PPE"/>
+                            <constraint firstItem="dnK-qp-DUS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="qMM-SK-rlC"/>
+                            <constraint firstItem="iCq-ZX-nYZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="rXy-aW-9gc"/>
+                            <constraint firstItem="8t1-vK-B3q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="srn-xX-CBA"/>
+                            <constraint firstItem="iCq-ZX-nYZ" firstAttribute="top" secondItem="dnK-qp-DUS" secondAttribute="bottom" constant="8" id="uv7-E8-DxH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan" id="Bpy-58-IqE"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="8t1-vK-B3q" id="Id9-dP-kIh"/>
+                        <outlet property="imageView" destination="dnK-qp-DUS" id="EiO-a2-PIh"/>
+                        <outlet property="testButton" destination="iCq-ZX-nYZ" id="h3D-bz-FNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3188" y="67.916041979010501"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fBd-Fu-Gel">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rvo-um-e9p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iZQ-5q-Co7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bjX-hh-Qmd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sY3-XD-WJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248.8000000000002" y="67.916041979010501"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.on.rectangle" catalog="system" width="32" height="32"/>
+    </resources>
+</document>
